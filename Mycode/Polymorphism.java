@@ -103,51 +103,51 @@ import java.util.Scanner;
 
 // // ---- Run Time Polymorphisim  With a Animal Example ---- 
 
-// class Animal {
-//     void sound() {
-//         System.out.println("Animal makes a sound");
-//     }
-// }
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
 
-// class Dog extends Animal {
-//     @Override
-//     void sound() {
-//         System.out.println("Dog barks");
-//     }
-// }
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
 
-// class Cat extends Animal {
-//     @Override
-//     void sound() {
-//         System.out.println("Cat meows");
-//     }
-// }
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
 
-// public class Polymorphism {
-//     public static void main(String[] args) {
+public class Polymorphism {
+    public static void main(String[] args) {
 
-//         Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-//         System.out.println("Enter animal type:");
-//         System.out.println("1. Dog");
-//         System.out.println("2. Cat");
+        System.out.println("Enter animal type:");
+        System.out.println("1. Dog");
+        System.out.println("2. Cat");
 
-//         int choice = sc.nextInt();
+        int choice = sc.nextInt();
 
-//         Animal animal;   // Parent class reference
+        Animal animal;   // Parent class reference
 
-//         if (choice == 1) {
-//             animal = new Dog();
-//         } else if (choice == 2) {
-//             animal = new Cat();
-//         } else {
-//             System.out.println("Invalid choice");
-//             return;
-//         }
+        if (choice == 1) {
+            animal = new Dog();
+        } else if (choice == 2) {
+            animal = new Cat();
+        } else {
+            System.out.println("Invalid choice");
+            return;
+        }
 
-//         // Runtime polymorphism
-//         animal.sound();
+        // Runtime polymorphism
+        animal.sound();
 
-//         sc.close();
-//     }
-// }
+        sc.close();
+    }
+}
