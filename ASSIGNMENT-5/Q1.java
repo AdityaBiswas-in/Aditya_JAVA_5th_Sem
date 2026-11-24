@@ -8,7 +8,8 @@ public class Q1 {
             // a) Take input from user
             System.out.print("Enter choice (1-Add, 2-Sub, 3-Mul, 4-Div): ");
             int ch = sc.nextInt();
-            System.out.print("Enter two numbers: ");
+
+            System.out.print("\nEnter two numbers: ");
             int a = sc.nextInt(), b = sc.nextInt();
 
             // f) Nested try-catch block
