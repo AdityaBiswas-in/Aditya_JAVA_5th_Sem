@@ -25,7 +25,6 @@ public class Q1 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         try {
             // a) Create the file if it does not exist
             if (!file.exists())
@@ -36,15 +35,12 @@ public class Q1 {
                 System.out.print("Enter choice: ");
                 int ch = sc.nextInt();
                 sc.nextLine(); // consume newline
-
                 if (ch == 5)
                     break;
-
                 if (ch == 1 || ch == 2 || ch == 4) {
                     // b) Take details from user
                     System.out.print("Enter Name, Roll No, Dept: ");
                     String details = sc.nextLine();
-
                     // b) Write (append=false), c) Append (append=true), e) Overwrite (append=false)
                     saveRecord(details, ch == 2);
                 } else if (ch == 3) {
