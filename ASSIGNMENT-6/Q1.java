@@ -28,7 +28,8 @@ public class Q1 {
 
         try {
             // a) Create the file if it does not exist
-            if (!file.exists()) file.createNewFile();
+            if (!file.exists())
+                file.createNewFile();
 
             while (true) {
                 System.out.println("\n1.Write 2.Append 3.Read 4.Overwrite 5.Exit");
@@ -36,7 +37,8 @@ public class Q1 {
                 int ch = sc.nextInt();
                 sc.nextLine(); // consume newline
 
-                if (ch == 5) break;
+                if (ch == 5)
+                    break;
 
                 if (ch == 1 || ch == 2 || ch == 4) {
                     // b) Take details from user
@@ -52,7 +54,7 @@ public class Q1 {
                     System.out.println("Invalid choice!");
                 }
             }
-        } 
+        }
         // f) Handle FileNotFoundException and IOException
         catch (FileNotFoundException e) {
             System.out.println("File not found: " + e.getMessage());
