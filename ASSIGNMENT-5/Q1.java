@@ -13,16 +13,21 @@ public class Q1 {
 
             // f) Nested try-catch block
             try {
-                if (ch == 1) System.out.println("Result: " + (a + b));
-                else if (ch == 2) System.out.println("Result: " + (a - b));
-                else if (ch == 3) System.out.println("Result: " + (a * b));
-                else if (ch == 4) System.out.println("Result: " + (a / b)); // b) Division by zero
-                else System.out.println("Invalid choice!");
-            } catch (ArithmeticException e) { // b) & d) Multiple catch
+                if (ch == 1)
+                    System.out.println("Result: " + (a + b));
+                else if (ch == 2)
+                    System.out.println("Result: " + (a - b));
+                else if (ch == 3)
+                    System.out.println("Result: " + (a * b));
+                else if (ch == 4)
+                    System.out.println("Result: " + (a / b)); // b) Division by zero
+                else
+                    System.out.println("Invalid choice!");
+            } catch (ArithmeticException e) { // b)
                 System.out.println("Error: Cannot divide by zero!");
             }
 
-        } catch (InputMismatchException e) { // c) & d) Multiple catch
+        } catch (InputMismatchException e) { // c)
             System.out.println("Error: Invalid input! Enter numbers only.");
         } catch (Exception e) { // d) Multiple catch
             System.out.println("Error: " + e.getMessage());
