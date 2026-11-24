@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 class BankAccount {
-    // Private data members
     private String accountHolder;
     private String accountNumber;
     private double balance;
@@ -14,22 +13,36 @@ class BankAccount {
     }
 
     // b) Getter and setter methods
-    public String getAccountHolder() { return accountHolder; }
-    public void setAccountHolder(String name) { this.accountHolder = name; }
-    public String getAccountNumber() { return accountNumber; }
-    public double getBalance() { return balance; }
+    public String getAccountHolder() {
+        return accountHolder;
+    }
+
+    public void setAccountHolder(String name) {
+        this.accountHolder = name;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
 
     // c) & d) deposit() with positive validation
     public void deposit(double amount) throws Exception {
-        if (amount <= 0) throw new Exception("Deposit amount must be positive!");
+        if (amount <= 0)
+            throw new Exception("Deposit amount must be positive!");
         balance += amount;
         System.out.println("Deposited: " + amount);
     }
 
     // c) & e) withdraw() with validation and exceptions
     public void withdraw(double amount) throws Exception {
-        if (amount <= 0) throw new Exception("Withdrawal amount must be positive!");
-        if (amount > balance) throw new Exception("Insufficient balance!");
+        if (amount <= 0)
+            throw new Exception("Withdrawal amount must be positive!");
+        if (amount > balance)
+            throw new Exception("Insufficient balance!");
         balance -= amount;
         System.out.println("Withdrawn: " + amount);
     }
